@@ -12,7 +12,7 @@ body {
     height: 100%;
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
-    font-weight: 500, 700;
+    /* font-weight: 500, 700; */
 }
 
 .wrapper {
@@ -46,9 +46,85 @@ body {
 }
 
 .article__content {
-    /* background-color: red; */
     height: 280px;
     width: 445px;
+    /* min-width: 445px; */
+    padding: 32px 40px;
+}
+
+.article__content--header,
+.article__content-text {
+    padding: 0;
+    margin: 0;
+}
+
+.article__content--header {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 140%;
+    letter-spacing: 1.25%;
+    margin-bottom: 12px; /* Check typography modifier */
+}
+
+.article__content--text {
+    font-size: 13px;
+    font-weight: 500px;
+    margin-bottom: 20px; /* Check typography modifier */
+}
+
+.author {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.author__inner {
+    width: 172px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author__content {
+    width: 116px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.author__content--name,
+.author__content--date {
+    margin: 0;
+    padding: 0;
+}
+
+.author__content--name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.author__content--date {
+    font-size: 1rem;
+    font-weight: medium;
+}
+
+.author__button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 @media (max-width: 800px) {
@@ -56,20 +132,22 @@ body {
         min-width: 100%;
         max-height: 200px;
     }
+
+    .article__content {
+        min-height: fit-content;
+        padding: 36px 38px 20px 38px;
+        width: 100%;
+    }
+
+    .article__content--header {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .article__content--text {
+        margin-bottom: 32px;
+    }
 }
-
-/* .article__img {
-    max-width: 285px;
-    flex: 1 1 285px;
-} */
-
-/* .article__content {
-    flex: 1 1 auto;
-} */
-
-/* .article__img, .article__content {
-
-} */
 
 /* - [Font Awesome](https://fontawesome.com)
 - [IcoMoon](https://icomoon.io)
