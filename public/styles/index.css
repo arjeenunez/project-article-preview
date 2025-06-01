@@ -184,7 +184,7 @@ body {
 
     .article__content {
         min-height: fit-content;
-        padding: 36px 38px 20px 38px;
+        padding: 36px 38px;
         width: 100%;
         margin-bottom: 32px;
     }
