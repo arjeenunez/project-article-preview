@@ -35,6 +35,7 @@ body {
     display: flex;
     flex-flow: row wrap;
     margin: 24px;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
 }
 
 .article__img {
@@ -207,13 +208,13 @@ body {
         padding: 0 38px;
     }
 
-    .author--toggle {
+    .author--active {
         background-color: var(--color-very-dark-grayish-blue);
     }
 
     /* For deletion */
 
-    .author__modal--toggle {
+    .author__modal--active {
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -221,14 +222,14 @@ body {
         background-color: transparent;
     }
 
-    .author__links--toggle {
+    .author__links--active {
         position: static;
         border-radius: 0;
         padding: 0;
         width: 184px;
     }
 
-    .author__links--inner--toggle {
+    .author__links--inner--active {
         display: none;
     }
 

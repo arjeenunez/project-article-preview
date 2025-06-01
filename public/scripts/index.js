@@ -3,20 +3,12 @@ document.querySelector('.author').addEventListener('click', function (evt) {
     if (!button) return;
     const isMobile = window.matchMedia('(max-width: 800px)').matches;
     if (isMobile) {
-        this.classList.toggle('author--toggle');
+        this.classList.toggle('author--active');
         button.classList.toggle('author__button--active');
         this.querySelector('.author__inner').classList.toggle('hidden');
-        this.querySelector('.author__modal').classList.toggle('author__modal--toggle');
-        this.querySelector('.author__links').classList.toggle('author__links--toggle');
-        this.querySelector('.author__links--inner').classList.toggle('author__links--inner--toggle');
+        this.querySelector('.author__modal').classList.toggle('author__modal--active');
+        this.querySelector('.author__links').classList.toggle('author__links--active');
+        this.querySelector('.author__links--inner').classList.toggle('author__links--inner--active');
     }
     this.querySelector('.author__links').classList.toggle('hidden');
 });
-
-// document.querySelector('.author__button').addEventListener('click', function (evt) {
-//     const isMobile = window.matchMedia('(max-width: 800px)').matches;
-//     const parentElement = this.closest('.author__modal');
-//     if (isMobile) {
-//     }
-//     this.closest('.author__modal').querySelector('.author__links').classList.toggle('hidden');
-// });
