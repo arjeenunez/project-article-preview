@@ -3,6 +3,8 @@ document.querySelector('.author').addEventListener('click', function (evt) {
     if (!button) return;
     const isMobile = window.matchMedia('(max-width: 800px)').matches;
     if (isMobile) {
+        this.classList.toggle('author--toggle');
+        button.classList.toggle('author__button--active');
         this.querySelector('.author__inner').classList.toggle('hidden');
         this.querySelector('.author__modal').classList.toggle('author__modal--toggle');
         this.querySelector('.author__links').classList.toggle('author__links--toggle');

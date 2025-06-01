@@ -12,7 +12,6 @@ body {
     height: 100%;
     font-size: 13px;
     font-family: 'Manrope', sans-serif;
-    /* font-weight: 500, 700; */
 }
 
 .wrapper {
@@ -22,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: var(--color-grayish-blue);
 }
 
 .article {
@@ -64,12 +63,14 @@ body {
     line-height: 140%;
     letter-spacing: 1.25%;
     margin-bottom: 12px; /* Check typography modifier */
+    color: var(--color-very-dark-grayish-blue);
 }
 
 .article__content--text {
     font-size: 13px;
     font-weight: 500px;
     margin-bottom: 20px; /* Check typography modifier */
+    color: var(--color-desaturated-dark-blue);
 }
 
 .author {
@@ -78,7 +79,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
 }
 
 .author__img {
@@ -112,11 +112,13 @@ body {
 .author__content--name {
     font-size: 1rem;
     font-weight: bold;
+    color: var(--color-very-dark-grayish-blue);
 }
 
 .author__content--date {
     font-size: 1rem;
     font-weight: medium;
+    color: var(--color-desaturated-dark-blue);
 }
 
 .author__modal {
@@ -131,7 +133,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green;
+    background-color: var(--color-very-dark-grayish-blue);
     border-radius: 10px;
     top: -200%;
     right: -105px;
@@ -141,7 +143,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: green;
+    background-color: var(--color-very-dark-grayish-blue);
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%) rotate(45deg);
@@ -205,6 +207,10 @@ body {
         padding: 0 38px;
     }
 
+    .author--toggle {
+        background-color: var(--color-very-dark-grayish-blue);
+    }
+
     /* For deletion */
 
     .author__modal--toggle {
@@ -212,6 +218,7 @@ body {
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        background-color: transparent;
     }
 
     .author__links--toggle {
@@ -223,6 +230,11 @@ body {
 
     .author__links--inner--toggle {
         display: none;
+    }
+
+    .author__button--active {
+        /* opacity: 0.25; */
+        background-color: white;
     }
 }
 
