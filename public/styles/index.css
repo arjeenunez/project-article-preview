@@ -26,6 +26,7 @@ body {
 }
 
 .article {
+    position: relative;
     width: 100%;
     max-width: 730px;
     min-width: 327px;
@@ -35,7 +36,6 @@ body {
     display: flex;
     flex-flow: row wrap;
     margin: 24px;
-    overflow: hidden;
 }
 
 .article__img {
@@ -43,12 +43,12 @@ body {
     background-size: cover;
     width: 285px;
     height: 280px;
+    border-radius: 10px 0 0 10px;
 }
 
 .article__content {
     height: 280px;
     width: 445px;
-    /* min-width: 445px; */
     padding: 32px 40px;
 }
 
@@ -78,6 +78,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: red;
 }
 
 .author__img {
@@ -96,7 +97,7 @@ body {
 
 .author__content {
     width: 116px;
-    height: 100%;
+    max-height: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -118,6 +119,46 @@ body {
     font-weight: medium;
 }
 
+.author__modal {
+    position: relative;
+}
+
+.author__links {
+    position: absolute;
+    width: 248px;
+    height: 55px;
+    padding: 0 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    border-radius: 10px;
+    top: -200%;
+    right: -105px;
+}
+
+.author__links--inner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(45deg);
+}
+
+.author__link {
+    font-size: 1rem;
+    letter-spacing: 38%;
+    text-decoration: none;
+    color: white;
+    fill: white;
+}
+
+.author__link--img {
+    width: 20px;
+}
+
 .author__button {
     appearance: none;
     -webkit-appearance: none;
@@ -127,16 +168,22 @@ body {
     border-radius: 50%;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 800px) {
     .article__img {
         min-width: 100%;
         max-height: 200px;
+        border-radius: 10px 10px 0 0;
     }
 
     .article__content {
         min-height: fit-content;
         padding: 36px 38px 20px 38px;
         width: 100%;
+        margin-bottom: 32px;
     }
 
     .article__content--header {
@@ -146,6 +193,36 @@ body {
 
     .article__content--text {
         margin-bottom: 32px;
+    }
+
+    .author {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        border-radius: 0 0 10px 10px;
+        padding: 0 38px;
+    }
+
+    /* For deletion */
+
+    .author__modal--toggle {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .author__links--toggle {
+        position: static;
+        border-radius: 0;
+        padding: 0;
+        width: 184px;
+    }
+
+    .author__links--inner--toggle {
+        display: none;
     }
 }
 
